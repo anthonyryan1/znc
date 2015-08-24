@@ -57,7 +57,7 @@ public:
 	virtual ~CCryptMod() {}
 
 	virtual EModRet OnUserMsg(CString& sTarget, CString& sMessage) override {
-		sTarget.TrimLeft(NickPrefix());
+		sTarget.TrimPrefix(NickPrefix());
 
 		if (sMessage.StartsWith("``")) {
 			sMessage.LeftChomp(2);
